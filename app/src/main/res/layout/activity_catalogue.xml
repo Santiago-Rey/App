@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CatalogueActivity"
+    android:background="@android:color/white">
+
+    <TextView
+        android:id="@+id/textCatalogue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="120dp"
+        android:text="CATÁLOGO"
+        android:textColor="@android:color/black"
+        android:background="@color/purple_200"
+        android:textSize="40dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/chocolate"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_marginTop="72dp"
+        android:layout_marginRight="252dp"
+        android:src="@drawable/chocolate"
+        app:layout_constraintRight_toRightOf="@+id/textCatalogue"
+        app:layout_constraintTop_toBottomOf="@id/textCatalogue" />
+
+    <TextView
+        android:id="@+id/textChocolate"
+        android:layout_width="0dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="12dp"
+        android:text="Tortas de Chocolate"
+        android:textColor="@android:color/black"
+        android:textSize="15dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/chocolate"
+        android:layout_marginHorizontal="45dp"/>
+
+
+    <ImageView
+        android:id="@+id/frutas"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_marginTop="72dp"
+        android:layout_marginRight="60dp"
+        android:src="@drawable/frutas"
+        app:layout_constraintRight_toRightOf="@+id/textCatalogue"
+        app:layout_constraintTop_toBottomOf="@id/textCatalogue" />
+
+    <TextView
+        android:id="@+id/textFrutas"
+        android:layout_width="0dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="12dp"
+        android:text="Tortas de frutas"
+        android:textColor="@android:color/black"
+        android:textSize="15dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/frutas"
+        android:layout_marginHorizontal="230dp"/>
+
+    <ImageView
+        android:id="@+id/choco"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_marginTop="72dp"
+        android:layout_marginRight="250dp"
+        android:src="@drawable/choco"
+        app:layout_constraintRight_toRightOf="@+id/textCatalogue"
+        app:layout_constraintTop_toBottomOf="@id/chocolate" />
+
+    <TextView
+        android:id="@+id/textFresa"
+        android:layout_width="0dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="12dp"
+        android:text="Tortas de frutas"
+        android:textColor="@android:color/black"
+        android:textSize="15dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/choco"
+        android:layout_marginHorizontal="50dp"/>
+
+    <ImageView
+        android:id="@+id/cheese"
+        android:layout_width="110dp"
+        android:layout_height="140dp"
+        android:layout_marginTop="72dp"
+        android:layout_marginRight="60dp"
+        android:src="@drawable/cheese"
+        app:layout_constraintRight_toRightOf="@+id/textCatalogue"
+        app:layout_constraintTop_toBottomOf="@id/frutas" />
+
+    <TextView
+        android:id="@+id/textCheese"
+        android:layout_width="0dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="0dp"
+        android:text="Tortas de frutas"
+        android:textColor="@android:color/black"
+        android:textSize="15dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cheese"
+        android:layout_marginHorizontal="245dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
