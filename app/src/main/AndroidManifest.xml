@@ -10,16 +10,19 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ProjectAppCake">
         <activity
+            android:name=".ProductChocolateMain"
+            android:exported="false" />
+        <activity
             android:name=".CreateAccount"
             android:exported="false" />
         <activity
             android:name=".CatalogueActivity"
             android:exported="false" />
         <activity
-            android:name=".LoginActivityE"
+            android:name=".LoginActivityEmpresarial"
             android:exported="false" />
         <activity
-            android:name=".LoginActivityC"
+            android:name=".LoginActivityClient"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

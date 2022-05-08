@@ -21,32 +21,17 @@ class MainActivity : AppCompatActivity() {
             loginEmpresarial()
         }
 
-        val btn: Button = findViewById(R.id.btnCatalog)
-        btn.setOnClickListener {
-            val intent: Intent = Intent(this, CatalogueActivity::class.java)
-            startActivity(intent)
-        }
-
-        val btnProfile = findViewById<Button>(R.id.btnProfile)
-        btnProfile.setOnClickListener {
-            createProfile()
-        }
 
     }
 
     fun loginClient() {
-       val intent = Intent(this, LoginActivityC::class.java)
+       val intent = Intent(this, LoginActivityClient::class.java)
         startActivity(intent)
     }
 
     fun loginEmpresarial() {
-        val intent = Intent(this, LoginActivityE::class.java)
+        val intent = Intent(this, LoginActivityEmpresarial::class.java)
         startActivity(intent)
     }
 
-
-    fun createProfile(){
-        val intent = Intent(this, CreateAccount::class.java)
-        startActivity(intent)
-    }
 }

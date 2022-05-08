@@ -3,9 +3,9 @@ package com.example.projectappcake
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 
-class LoginActivityE : AppCompatActivity() {
+class ProductChocolateMain : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.login_activity_empresarial)
+        setContentView(R.layout.activity_product_chocolate_main)
     }
 }
