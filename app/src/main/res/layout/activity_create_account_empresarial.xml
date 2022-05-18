@@ -4,15 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CreateAccount"
+    tools:context=".CreateAccountEmpresarial"
     android:background="@android:color/white" >
-
 
     <ImageView
         android:id="@+id/photo"
         android:layout_width="200dp"
         android:layout_height="200dp"
-        android:layout_marginStart="92dp"
+        android:layout_marginLeft="92dp"
         android:layout_marginTop="104dp"
         android:paddingHorizontal="256dp"
         android:scaleType="centerCrop"
@@ -25,7 +24,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="120dp"
-        android:text="Username"
+        android:text="Nit"
         android:textSize="15sp"
         android:textColor="@android:color/black"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -39,7 +38,7 @@
         app:layout_constraintTop_toBottomOf="@id/photo"
         app:layout_constraintStart_toStartOf="parent"
         android:inputType="text"
-        android:hint="Username"
+        android:hint="Nit"
         android:textColorHint="@android:color/darker_gray"
         android:backgroundTint="@color/black"
         />
@@ -124,9 +123,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         android:textSize="20sp"
-        android:text="SAVE"
+        android:text="SIGN UP"
         android:backgroundTint="@color/purple_200"
         />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

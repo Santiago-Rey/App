@@ -13,6 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="120dp"
         android:text="CATÁLOGO"
+        android:textStyle="bold"
         android:textColor="@android:color/black"
         android:background="@color/purple_200"
         android:textSize="40sp"
@@ -25,7 +26,7 @@
         android:layout_width="110dp"
         android:layout_height="110dp"
         android:layout_marginTop="72dp"
-        android:layout_marginRight="245dp"
+        android:layout_marginEnd="245dp"
         android:src="@drawable/chocolate"
         app:layout_constraintRight_toRightOf="@+id/textCatalogue"
         app:layout_constraintTop_toBottomOf="@id/textCatalogue" />
@@ -41,7 +42,7 @@
         android:textSize="15sp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@id/chocolate"
-        android:layout_marginHorizontal="45dp"/>
+        android:layout_marginHorizontal="25dp"/>
 
 
     <ImageView
@@ -49,7 +50,7 @@
         android:layout_width="110dp"
         android:layout_height="110dp"
         android:layout_marginTop="72dp"
-        android:layout_marginRight="60dp"
+        android:layout_marginEnd="60dp"
         android:src="@drawable/frutas"
         app:layout_constraintRight_toRightOf="@+id/textCatalogue"
         app:layout_constraintTop_toBottomOf="@id/textCatalogue" />
@@ -72,7 +73,7 @@
         android:layout_width="110dp"
         android:layout_height="110dp"
         android:layout_marginTop="72dp"
-        android:layout_marginRight="250dp"
+        android:layout_marginEnd="250dp"
         android:src="@drawable/choco"
         app:layout_constraintRight_toRightOf="@+id/textCatalogue"
         app:layout_constraintTop_toBottomOf="@id/chocolate" />
@@ -88,29 +89,30 @@
         android:textSize="15sp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@id/choco"
-        android:layout_marginHorizontal="50dp"/>
+        android:layout_marginHorizontal="25dp"/>
 
     <ImageView
         android:id="@+id/cheese"
         android:layout_width="110dp"
-        android:layout_height="140dp"
-        android:layout_marginTop="72dp"
-        android:layout_marginRight="60dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="60dp"
         android:src="@drawable/cheese"
         app:layout_constraintRight_toRightOf="@+id/textCatalogue"
-        app:layout_constraintTop_toBottomOf="@id/frutas" />
+        app:layout_constraintTop_toBottomOf="@id/frutas"
+        />
 
     <TextView
         android:id="@+id/textCheese"
         android:layout_width="0dp"
         android:layout_height="20dp"
-        android:layout_marginTop="0dp"
+        android:layout_marginTop="13dp"
         android:text="Tortas de queso"
         android:textStyle="bold"
         android:textColor="@android:color/black"
         android:textSize="15sp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@id/cheese"
-        android:layout_marginHorizontal="245dp"/>
+        android:layout_marginHorizontal="225dp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

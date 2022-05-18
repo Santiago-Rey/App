@@ -83,4 +83,16 @@
         android:backgroundTint="@android:color/darker_gray"
         />
 
+    <Button
+        android:id="@+id/btnRegisterEmpresarial"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnLoginEmpresarial"
+        android:textSize="15dp"
+        android:text="sign up"
+        android:backgroundTint="@color/teal_200"
+        />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

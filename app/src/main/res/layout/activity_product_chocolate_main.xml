@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
     tools:context=".ProductChocolateMain"
     android:background="@android:color/darker_gray">
+
 
     <TextView
         android:id="@+id/textCatalogue"
@@ -13,6 +20,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="120dp"
         android:text="Tortas de CHOCOLATE"
+        android:textStyle="bold"
         android:textColor="@android:color/black"
         android:background="@color/purple_200"
         android:textSize="35sp"
@@ -22,14 +30,13 @@
 
     <ImageView
         android:id="@+id/tortaDeChocolate"
-        android:layout_width="110dp"
-        android:layout_height="110dp"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
         android:layout_marginTop="72dp"
-        android:layout_marginRight="245dp"
+        android:layout_marginEnd="190dp"
         android:src="@drawable/tortachocolate"
         app:layout_constraintRight_toRightOf="@+id/textCatalogue"
         app:layout_constraintTop_toBottomOf="@id/textCatalogue" />
-
 
     <TextView
         android:id="@+id/textChocolate"
@@ -40,26 +47,81 @@
         android:layout_marginEnd="48dp"
         android:text="Torta de Chocolate"
         android:textStyle="bold"
-        android:textColor="@android:color/black"
+        android:textColor="@color/black"
         android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintRight_toRightOf="@id/tortaDeChocolate"
         app:layout_constraintTop_toTopOf="@id/tortaDeChocolate" />
 
+    <TextView
+        android:id="@+id/textChocolate1"
+        android:layout_width="0dp"
+        android:layout_height="20dp"
+        android:layout_marginHorizontal="45dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="48dp"
+        android:text="Precio unidad: "
+        android:textColor="@android:color/black"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@id/textChocolate"
+        app:layout_constraintRight_toRightOf="@id/tortaDeChocolate"
+        app:layout_constraintTop_toBottomOf="@id/textChocolate" />
+
+    <TextView
+        android:id="@+id/textChocolate2"
+        android:layout_width="0dp"
+        android:layout_height="20dp"
+        android:layout_marginHorizontal="45dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="48dp"
+        android:text="Peso: "
+        android:textColor="@android:color/black"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@id/textChocolate1"
+        app:layout_constraintRight_toRightOf="@id/tortaDeChocolate"
+        app:layout_constraintTop_toBottomOf="@id/textChocolate1" />
+
+    <TextView
+        android:id="@+id/textChocolate3"
+        android:layout_width="0dp"
+        android:layout_height="20dp"
+        android:layout_marginHorizontal="45dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="48dp"
+        android:text="Empresa: "
+        android:textColor="@android:color/black"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@id/textChocolate2"
+        app:layout_constraintRight_toRightOf="@id/tortaDeChocolate"
+        app:layout_constraintTop_toBottomOf="@id/textChocolate2" />
+
+    <Button
+        android:id="@+id/btnComprar"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/textChocolate3"
+        app:layout_constraintStart_toStartOf="@id/textChocolate3"
+        android:textSize="15sp"
+        android:text="COMPRAR"
+        android:backgroundTint="@android:color/holo_red_light"
+        android:onClick="showProductOne"
+        />
 
     <ImageView
         android:id="@+id/tortaChispasChocolate"
-        android:layout_width="110dp"
-        android:layout_height="110dp"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
         android:layout_marginTop="72dp"
-        android:layout_marginRight="250dp"
+        android:layout_marginEnd="210dp"
         android:src="@drawable/tortachispaschocolate"
         app:layout_constraintRight_toRightOf="@+id/textCatalogue"
-        app:layout_constraintTop_toBottomOf="@id/tortaDeChocolate" />
+        app:layout_constraintTop_toBottomOf="@id/tortaDeChocolate"
+
+        />
 
     <TextView
         android:id="@+id/textChispasChocolate"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="20dp"
         android:layout_marginTop="12dp"
         android:text="Torta con chispas de chocolate"
@@ -70,11 +132,64 @@
         app:layout_constraintRight_toRightOf="@+id/tortaChispasChocolate"
         app:layout_constraintTop_toTopOf="@+id/tortaChispasChocolate" />
 
+    <TextView
+        android:id="@+id/textChispasChocolate1"
+        android:layout_width="0dp"
+        android:layout_height="20dp"
+        android:layout_marginHorizontal="45dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="48dp"
+        android:text="Precio unidad: "
+        android:textColor="@android:color/black"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@id/textChocolate2"
+        app:layout_constraintRight_toRightOf="@id/tortaDeChocolate"
+        app:layout_constraintTop_toBottomOf="@id/textChispasChocolate" />
+
+    <TextView
+        android:id="@+id/textChispasChocolate2"
+        android:layout_width="0dp"
+        android:layout_height="20dp"
+        android:layout_marginHorizontal="45dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="48dp"
+        android:text="Peso: "
+        android:textColor="@android:color/black"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@id/textChocolate2"
+        app:layout_constraintRight_toRightOf="@id/tortaDeChocolate"
+        app:layout_constraintTop_toBottomOf="@id/textChispasChocolate1" />
+
+    <TextView
+        android:id="@+id/textChispasChocolate3"
+        android:layout_width="0dp"
+        android:layout_height="20dp"
+        android:layout_marginHorizontal="45dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="48dp"
+        android:text="Empresa: "
+        android:textColor="@android:color/black"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@id/textChocolate2"
+        app:layout_constraintRight_toRightOf="@id/tortaDeChocolate"
+        app:layout_constraintTop_toBottomOf="@id/textChispasChocolate2" />
+
+    <Button
+        android:id="@+id/btnComprar1"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/textChispasChocolate3"
+        app:layout_constraintStart_toStartOf="@+id/textChispasChocolate3"
+        android:textSize="15sp"
+        android:text="COMPRAR"
+        android:backgroundTint="@android:color/holo_red_light"
+        android:onClick="showProductTwo"
+        />
 
     <ImageView
         android:id="@+id/tortaChocolateArequipe"
-        android:layout_width="110dp"
-        android:layout_height="110dp"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
         android:layout_marginTop="72dp"
         android:src="@drawable/tortachocolatearequipe"
         app:layout_constraintRight_toRightOf="@id/tortaChispasChocolate"
@@ -82,10 +197,10 @@
 
     <TextView
         android:id="@+id/textTortaArequipe"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="20dp"
         android:layout_marginTop="12dp"
-        android:text="Tortas de Chocolate con Arequipe"
+        android:text="Torta de Chocolate con Arequipe"
         android:textStyle="bold"
         android:textColor="@android:color/black"
         android:textSize="15sp"
@@ -93,7 +208,59 @@
         app:layout_constraintRight_toRightOf="@+id/tortaChocolateArequipe"
         app:layout_constraintTop_toTopOf="@+id/tortaChocolateArequipe" />
 
+    <TextView
+        android:id="@+id/textTortaArequipe1"
+        android:layout_width="0dp"
+        android:layout_height="20dp"
+        android:layout_marginHorizontal="45dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="48dp"
+        android:text="Precio unidad: "
+        android:textColor="@android:color/black"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@id/textChocolate2"
+        app:layout_constraintRight_toRightOf="@id/tortaChocolateArequipe"
+        app:layout_constraintTop_toBottomOf="@id/textTortaArequipe" />
 
+    <TextView
+        android:id="@+id/textTortaArequipe2"
+        android:layout_width="0dp"
+        android:layout_height="20dp"
+        android:layout_marginHorizontal="45dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="48dp"
+        android:text="Peso: "
+        android:textColor="@android:color/black"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@id/textChocolate2"
+        app:layout_constraintRight_toRightOf="@id/tortaChocolateArequipe"
+        app:layout_constraintTop_toBottomOf="@+id/textTortaArequipe1" />
 
+    <TextView
+        android:id="@+id/textTortaArequipe3"
+        android:layout_width="0dp"
+        android:layout_height="20dp"
+        android:layout_marginHorizontal="45dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="48dp"
+        android:text="Empresa: "
+        android:textColor="@android:color/black"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@id/textChocolate2"
+        app:layout_constraintRight_toRightOf="@id/tortaChocolateArequipe"
+        app:layout_constraintTop_toBottomOf="@+id/textTortaArequipe2" />
+
+    <Button
+        android:id="@+id/btnComprar2"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/textTortaArequipe3"
+        app:layout_constraintStart_toStartOf="@id/textTortaArequipe3"
+        android:textSize="15sp"
+        android:text="COMPRAR"
+        android:backgroundTint="@android:color/holo_red_light"
+        android:onClick="showProductThree"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ProjectAppCake">
         <activity
+            android:name=".SelectionProduct"
+            android:exported="false" />
+        <activity
+            android:name=".CreateAccountEmpresarial"
+            android:exported="false" />
+        <activity
             android:name=".ProductChocolateMain"
             android:exported="false" />
         <activity
