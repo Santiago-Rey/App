@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "277789063198",
+    "project_id": "appcake-59f95",
+    "storage_bucket": "appcake-59f95.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:277789063198:android:fd0f281763f72b0506560f",
+        "android_client_info": {
+          "package_name": "com.example.projectappcake"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "277789063198-7faou7ldfb5epbj14pfqfekdotj6dmr0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDlakbzV_o4-CqvaJNgINHc9y3SWvX7YRk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "277789063198-7faou7ldfb5epbj14pfqfekdotj6dmr0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
