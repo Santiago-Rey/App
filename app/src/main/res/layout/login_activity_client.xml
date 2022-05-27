@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".LoginActivityClient"
-    android:background="@android:color/white" >
+    android:background="@drawable/fondoregistro" >
 
 
 
@@ -15,7 +15,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="120dp"
         android:text="Login"
-        android:textSize="40dp"
+        android:textSize="40sp"
         android:textColor="@android:color/black"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -27,7 +27,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="120dp"
         android:text="Username"
-        android:textSize="15dp"
+        android:textSize="15sp"
         android:textColor="@android:color/black"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintBottom_toTopOf="@id/textUserName" />
@@ -41,6 +41,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toStartOf="@id/textLoginClient"
         android:inputType="text"
+        android:textColor="@color/black"
         android:hint="Username"
         android:textColorHint="@android:color/darker_gray"
         android:backgroundTint="@color/black"
@@ -52,7 +53,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
         android:text="Password"
-        android:textSize="15dp"
+        android:textSize="15sp"
         android:textColor="@android:color/black"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintBottom_toTopOf="@id/textUserPass" />
@@ -66,12 +67,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toStartOf="@id/textUserName"
         android:inputType="text"
+        android:textColor="@color/black"
         android:hint="Password"
         android:textColorHint="@android:color/darker_gray"
         android:backgroundTint="@color/black"
         />
 
-    <Button
+    <TextView
         android:id="@+id/btnLogClient"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
@@ -79,11 +81,12 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/textUserPass"
-        android:textSize="12dp"
+        android:textAlignment="center"
+        android:textSize="20sp"
         android:text="Login"
         android:textColor="@color/black"
-        android:backgroundTint="@android:color/darker_gray"
-        />
+        android:background="@color/purple_200"
+        android:onClick="login" />
 
     <Button
         android:id="@+id/btnRegister"
@@ -92,9 +95,29 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/btnLogClient"
-        android:textSize="15dp"
+        android:textSize="15sp"
         android:text="sign up"
         android:backgroundTint="@color/teal_200"
         />
+
+
+
+        <CheckBox
+            android:id="@+id/checkAccept"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="10sp"
+            android:text="Acepto terminos y condiciones"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toBottomOf="@id/textUserPass"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+
+
+
+
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

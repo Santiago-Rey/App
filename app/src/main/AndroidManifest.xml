@@ -29,10 +29,11 @@
             android:exported="false" />
         <activity
             android:name=".LoginActivityClient"
-            android:exported="false" />
+            android:exported="true">
+        </activity>
         <activity
             android:name=".MainActivity"
-            android:exported="true">
+            android:exported="true"><!-->Eso es lo primero que hace el usuario cuando se lance la aplicacion<-->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -27,7 +27,7 @@
         android:layout_marginTop="120dp"
         android:text="Username"
         android:textSize="15sp"
-        android:textColor="@android:color/black"
+        android:textColor="@color/black"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintBottom_toTopOf="@id/textId" />
 
@@ -39,6 +39,7 @@
         app:layout_constraintTop_toBottomOf="@id/photo"
         app:layout_constraintStart_toStartOf="parent"
         android:inputType="text"
+        android:textColor="@color/black"
         android:hint="Username"
         android:textColorHint="@android:color/darker_gray"
         android:backgroundTint="@color/black"
@@ -62,6 +63,7 @@
         app:layout_constraintTop_toBottomOf="@id/textId"
         app:layout_constraintStart_toStartOf="parent"
         android:inputType="text"
+        android:textColor="@color/black"
         android:hint="Name"
         android:textColorHint="@android:color/darker_gray"
         android:backgroundTint="@color/black"
@@ -86,6 +88,7 @@
         app:layout_constraintTop_toBottomOf="@id/textName"
         app:layout_constraintStart_toStartOf="parent"
         android:inputType="text"
+        android:textColor="@color/black"
         android:hint="Last Name"
         android:textColorHint="@android:color/darker_gray"
         android:backgroundTint="@color/black"
@@ -110,13 +113,14 @@
         app:layout_constraintTop_toBottomOf="@id/textLastName"
         app:layout_constraintStart_toStartOf="parent"
         android:inputType="textEmailAddress"
+        android:textColor="@color/black"
         android:hint="E-mail"
         android:textColorHint="@android:color/darker_gray"
         android:backgroundTint="@color/black"
         />
 
     <Button
-        android:id="@+id/btnEmpresarial"
+        android:id="@+id/btnClient"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_marginVertical="20dp"
