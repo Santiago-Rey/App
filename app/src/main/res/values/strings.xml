@@ -12,6 +12,9 @@
     <string name="login">Login</string>
     <string name="userName">Username</string>
     <string name="nit">Nit</string>
+    <string name="empresarial">Empresarial</string>
+    <string name="customer">Customer</string>
+    <string name="selectAccount">Select Account</string>
 
     <string name="sign_up">Sign Up</string>
     <string name="terms">Acepto Términos y Condiciones</string>

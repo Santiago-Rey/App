@@ -28,7 +28,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:textSize="30sp"
-        android:text="Empresarial"
+        android:text="@string/empresarial"
     />
 
     <Button
@@ -38,7 +38,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/btnEmpresarial"
-        android:text="Cliente"
+        android:text="@string/customer"
         android:textSize="30sp"
     />
 
@@ -48,7 +48,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="250dp"
-        android:text="Tipo de cuenta"
+        android:text="@string/selectAccount"
         android:textSize="40sp"
         android:textColor="@android:color/holo_red_light"
         app:layout_constraintLeft_toLeftOf="parent"
