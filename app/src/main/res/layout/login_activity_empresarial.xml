@@ -12,8 +12,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="120dp"
-        android:text="Login"
-        android:textSize="40dp"
+        android:text="@string/login"
+        android:textSize="40sp"
         android:textColor="@android:color/black"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -24,8 +24,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="120dp"
-        android:text="Nit"
-        android:textSize="15dp"
+        android:text="@string/nit"
+        android:textSize="15sp"
         android:textColor="@android:color/black"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintBottom_toTopOf="@id/textNit" />
@@ -40,7 +40,7 @@
         app:layout_constraintEnd_toStartOf="@id/textLoginEmpresarial"
         android:inputType="text"
         android:textColor="@color/black"
-        android:hint="Nit"
+        android:hint="@string/nit"
         android:textColorHint="@android:color/darker_gray"
         android:backgroundTint="@color/black"
         />
@@ -50,40 +50,58 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
-        android:text="Password"
-        android:textSize="15dp"
+        android:text="@string/password"
+        android:textSize="15sp"
         android:textColor="@android:color/black"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/textUserPass" />
+        app:layout_constraintBottom_toTopOf="@+id/designP" />
 
-    <EditText
-        android:id="@+id/textUserPass"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/designP"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="80dp"
         app:layout_constraintTop_toBottomOf="@id/textNit"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/textNit"
-        android:inputType="text"
+        app:endIconMode="password_toggle"
+        app:boxBackgroundColor="@color/bottomColor"
+        android:background="@android:color/transparent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/textUserPass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/password"
+            android:inputType="textPassword"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <CheckBox
+        android:id="@+id/checkAccept"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="11sp"
+        android:text="@string/terms"
         android:textColor="@color/black"
-        android:hint="Password"
-        android:textColorHint="@android:color/darker_gray"
-        android:backgroundTint="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/designP"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         />
 
-    <Button
-        android:id="@+id/btnLoginEmpresarial"
+    <TextView
+        android:id="@+id/tvLogEmpresarial"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_marginVertical="40dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textUserPass"
-        android:textSize="12dp"
-        android:text="Login"
+        app:layout_constraintTop_toBottomOf="@id/designP"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:text="@string/login"
         android:textColor="@color/black"
-        android:backgroundTint="@android:color/darker_gray"
-        />
+        android:background="@color/purple_200"
+        android:onClick="login" />
 
     <Button
         android:id="@+id/btnRegisterEmpresarial"
@@ -91,9 +109,9 @@
         android:layout_height="40dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btnLoginEmpresarial"
-        android:textSize="15dp"
-        android:text="sign up"
+        app:layout_constraintTop_toBottomOf="@id/tvLogEmpresarial"
+        android:textSize="15sp"
+        android:text="@string/sign_up"
         android:backgroundTint="@color/teal_200"
         />
 

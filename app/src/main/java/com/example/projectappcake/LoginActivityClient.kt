@@ -3,8 +3,11 @@ package com.example.projectappcake
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.TextUtils
 import android.view.View
 import android.widget.*
+import androidx.core.content.ContextCompat
+import androidx.core.widget.doOnTextChanged
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import java.text.SimpleDateFormat
@@ -15,7 +18,7 @@ class LoginActivityClient : AppCompatActivity() {
 
     companion object{
         lateinit var useremail: String
-        lateinit var privederSession: String
+        lateinit var providerSession: String
     }
 
     private var email by Delegates.notNull<String>()
@@ -40,8 +43,27 @@ class LoginActivityClient : AppCompatActivity() {
 
 
         val buttomRegister = findViewById<Button>(R.id.btnRegister)
+
         buttomRegister.setOnClickListener {
-            profile()
+            createAccount()
+        }
+
+        manageButtonLogin()//Esta función verifica si escribio correctamente
+        etEmail.doOnTextChanged { text, start, before, count -> manageButtonLogin() }
+        etPassword.doOnTextChanged { text, start, before, count -> manageButtonLogin() }
+    }
+
+    private fun manageButtonLogin(){
+        var tvLoginClient = findViewById<TextView>(R.id.tvLogClient)
+        email = etEmail.text.toString()
+        password = etPassword.text.toString()
+
+        if(TextUtils.isEmpty(password) || ValidateEmail.isEmail(email) == false){
+            tvLoginClient.setBackgroundColor(ContextCompat.getColor(this, R.color.gray))
+            tvLoginClient.isEnabled = false
+        }else{
+            tvLoginClient.setBackgroundColor(ContextCompat.getColor(this, R.color.purple_200))
+            tvLoginClient.isEnabled = true
         }
     }
 
@@ -63,16 +85,15 @@ class LoginActivityClient : AppCompatActivity() {
                         if (checkAccept.isChecked)
                             profile()
                     }
-
                 }
-
             }
+
     }
 
     fun catalogue(email: String, provider: String){
 
         useremail = email
-        privederSession = provider
+        providerSession = provider
 
         val intent = Intent(this, CatalogueActivity::class.java)
         startActivity(intent)
@@ -101,7 +122,9 @@ class LoginActivityClient : AppCompatActivity() {
                     Toast.makeText(this, "Error, algo ha ido mal!", Toast.LENGTH_SHORT).show()
                 }
             }
+    }
 
+    private fun createAccount(){
         val intent = Intent(this, CreateAccount::class.java)
         startActivity(intent)
 
